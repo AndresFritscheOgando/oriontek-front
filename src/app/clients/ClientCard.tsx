@@ -30,7 +30,7 @@ const ClientCard = () => {
   if (isError) return <p>Error: {(error as Error).message}</p>
 
   return (
-    <div className="grid gap-4 w-full md:w-2/3 mx-auto">
+    <div className="grid gap-4 w-full md:w-2/3 mx-auto text-black">
       {data?.map((client) => (
         <div
           key={client.id}
@@ -42,7 +42,7 @@ const ClientCard = () => {
               <h2 className="text-lg font-semibold">{client.nombre}</h2>
               <p className="text-sm text-gray-600">
                 {client.email}
-                {client.telefono && ` · ${client.telefono}`}
+                {" " + client.telefono}
               </p>
               {client.empresa && (
                 <p className="text-sm text-gray-500">{client.empresa}</p>
