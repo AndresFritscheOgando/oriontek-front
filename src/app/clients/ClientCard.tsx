@@ -41,9 +41,9 @@ const ClientCard = () => {
             <div className="space-y-1">
               <h2 className="text-lg font-semibold">{client.nombre}</h2>
               <p className="text-sm text-gray-600">
-                {client.email}
-                {" " + client.telefono}
-              </p>
+                {client.email}</p>
+                <p>{client.telefono}</p>
+              
               {client.empresa && (
                 <p className="text-sm text-gray-500">{client.empresa}</p>
               )}
